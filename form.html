@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ariza qoldirish</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="fonts/fonts.css">
+
+<style>
+  body{
+    font-family: 'Inter', sans-serif;
+    background: rgba(0,0,0,0.5);
+    margin:0;
+    padding:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+  }
+
+  .modal{
+    background:#fff;
+    width:92%;
+    max-width:420px;
+    padding:37px 7px;
+    border-radius:18px;
+    border-top:10px solid #FFD600;
+    box-shadow:0 10px 35px rgba(0,0,0,0.3);
+    position:relative;
+    text-align:center;
+    animation: fadeIn 0.35s ease;
+  }
+
+  @keyframes fadeIn {
+    from {opacity:0; transform:scale(0.95);}
+    to {opacity:1; transform:scale(1);}
+  }
+
+  .close{
+    position:absolute;
+    right:20px;
+    top:20px;
+    font-size:22px;
+    color:#000;
+    cursor:pointer;
+    width:30px;
+    height:30px;
+    background:#FFD600;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:700;
+  }
+
+  h2{
+    font-size:30px;
+    font-weight:800;
+    margin-bottom:12px;
+  }
+
+  p{
+    font-size:14px;
+    margin-bottom:30px;
+    color:#444;
+  }
+
+  input{
+    width:88%;
+    padding:17px;
+    font-size:18px;
+    border-radius:2px;
+    border:1px solid #ccc;
+    margin-bottom:20px;
+    outline:none;
+    box-sizing:border-box;
+  }
+
+  .btn{
+    width:88%;
+    padding:17px;
+    font-size:18px;
+    border-radius:2px;
+    border:none;
+    cursor:pointer;
+    font-weight:600;
+    margin-bottom:15px;
+  }
+
+  .btn-yellow{
+    background:#FFD600;
+  }
+
+  #msg{
+    margin-top:10px;
+    color:green;
+    font-size:17px;
+    font-weight:600;
+  }
+</style>
+</head>
+<body>
+
+<div class="modal">
+
+  <div class="close" onclick="closeModal()">×</div>
+
+  <h2>ARIZA QOLDIRING</h2>
+  <p>10 daqiqa ichida siz bilan bog‘lanamiz</p>
+
+  <input id="phone" type="tel" placeholder="+998 •• ••• •• ••" maxlength="19">
+
+  <button class="btn btn-yellow" onclick="sendToTelegram()">Ariza yuborish</button>
+
+  <p id="msg"></p>
+
+</div>
+
+<!-- ALOHIDA JS FAYL ULANADI -->
+<script src="app.js"></script>
+
+</body>
+</html>
